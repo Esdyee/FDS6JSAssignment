@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hover effect</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p>hover effect를 구현하라. 마우스가 .box 위에 올라오면 .box의 배경색을 blue로, 마우스가 .box에서 빠져나가면 .box의 배경색을 원래로 되돌린다.</p>
+  <div class="box"></div>
+  <script>
+    var box = document.getElementsByClassName('box');
+
+    box[0].addEventListener('mouseover', function() {
+      this.style.backgroundColor = 'blue';
+    });
+
+    box[0].addEventListener('mouseout', function() {
+      this.style.backgroundColor = 'red';
+    });
+  </script>
+</body>
+
+</html>
+<!--27. hover effect hover effect를 구현하라.
+    마우스가 .box 위에 올라오면 .box의 배경색을 blue로, 마우스가 .box에서 빠져나가면 .box의 배경색을 원래로 되돌린다. 
+    단, pure javascript 버전과 jQuery 버전 두가지를 완성하여야 한다.-->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>더하기 결과 확인</h1>
+  <input type="text" /> +
+  <input type="text" /> =
+  <input type="text" />
+  <button>확인</button>
+  <script>
+    var button = document.getElementsByTagName('button');
+
+    button[0].addEventListener('click', sum);
+
+    function sum() {
+      var param = document.getElementsByTagName('input');
+
+      var result = parseInt(param[2].value) === parseInt(param[0].value) + parseInt(param[1].value) ? true : false;
+
+      alert(result);
+    }
+  </script>
+</body>
+
+</html>
